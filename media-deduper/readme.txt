@@ -2,8 +2,8 @@
 Contributors: xavierserranoa, kenjigarland
 Tags: media, attachments, admin, upload
 Requires at least: 4.3
-Tested up to: 6.6.2
-Stable tag: 1.5.7
+Tested up to: 6.4
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,10 @@ The git repository should be publicly available at https://bitbucket.org/corners
 
 
 == Changelog ==
+= 1.5.8 =
+* Fixed deprecation warnings ("Creation of dynamic property...") that appeared under PHP 8.0+.
+* Fixed a deprecation from WP Core ("WP_List_Table::__set(): The property `is_trash` is not declared.").
+
 = 1.5.7 =
 * Enhancement: instead of warning about Smart Deletion each time a Smart Delete operation is performed, Media Deduper will now only warn before the first operation. Users can now Smart Delete multiple pages' worth of items on the Manage Duplicates screen without repeatedly clicking through the Smart Delete warning.
 * Fixed a bug that caused multiple copies of the warning message to appear when smart deleting items on the Manage Duplicates screen, when running on WordPress 5.7 and up.

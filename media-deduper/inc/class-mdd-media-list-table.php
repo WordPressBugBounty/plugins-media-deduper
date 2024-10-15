@@ -10,6 +10,9 @@ require_once( ABSPATH . 'wp-admin/includes/class-wp-media-list-table.php' );
  */
 class MDD_Media_List_Table extends WP_Media_List_Table {
 
+	// Dummy property to prevent deprecation warnings from line 23.
+	public $is_trash;
+
 	/**
 	 * @global WP_Query $wp_query
 	 */

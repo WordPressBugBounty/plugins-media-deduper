@@ -16,7 +16,7 @@ class Media_Deduper {
 	/**
 	 * Plugin version.
 	 */
-	const VERSION = '1.5.7';
+	const VERSION = '1.5.8';
 
 	/**
 	 * Special hash value used to mark an attachment if its file can't be found.
@@ -46,6 +46,41 @@ class Media_Deduper {
 	 * @var int Set/incremented in Media_Deduper::smart_delete_media().
 	 */
 	protected $smart_skipped_count = 0;
+
+	/**
+	 * Compatibility manager instance. Set in constructor.
+	 *
+	 * @var MDD_Compat_Manager
+	 */
+	public $compat_manager;
+
+	/**
+	 * Async tester instance. Set in constructor.
+	 *
+	 * @var MDD_Async_Test
+	 */
+	public $async_test;
+
+	/**
+	 * Indexer instance. Set in constructor.
+	 *
+	 * @var MDD_Indexer
+	 */
+	public $indexer;
+
+	/**
+	 * Capability required for browsing duplicates, Smart Deleting, etc. Set in constructor.
+	 *
+	 * @var string
+	 */
+	public $capability;
+
+	/**
+	 * Hook suffix for the Manage Duplicates screen. Set in `add_admin_menu()`.
+	 *
+	 * @var string
+	 */
+	public $hook;
 
 	/**
 	 * When the plugin is activated after being inactive, clear any previously cached transients, and
