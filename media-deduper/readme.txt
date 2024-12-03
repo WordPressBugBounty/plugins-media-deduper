@@ -2,8 +2,8 @@
 Contributors: xavierserranoa, kenjigarland
 Tags: media, attachments, admin, upload
 Requires at least: 4.3
-Tested up to: 6.4
-Stable tag: 1.5.8
+Tested up to: 6.7.1
+Stable tag: 1.5.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ As with any plugin that can perform destructive operations on your database and/
 **Need more support? [Media Deduper Pro](https://www.mediadeduper.com/) includes dedicated support from Cornershop Creative.**
 
 == Requirements ==
-Media Deduper requires PHP 5.3 or later.
+Media Deduper requires PHP 7.0 or later.
 
 == Installation ==
 1. Upload the `media-deduper` directory to your plugins directory (typically wp-content/plugins)
@@ -78,6 +78,10 @@ The git repository should be publicly available at https://bitbucket.org/corners
 
 
 == Changelog ==
+= 1.5.9 =
+* Fixed PHP warnings that could appear on the Debug Info screen if other plugins altered the `active_plugins` option or the output of the `get_plugins()` function.
+* Fixed a deprecation from WP Core ("WP_Scripts::localize was called incorrectly").
+
 = 1.5.8 =
 * Fixed deprecation warnings ("Creation of dynamic property...") that appeared under PHP 8.0+.
 * Fixed a deprecation from WP Core ("WP_List_Table::__set(): The property `is_trash` is not declared.").

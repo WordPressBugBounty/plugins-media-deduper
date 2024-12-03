@@ -16,7 +16,7 @@ class Media_Deduper {
 	/**
 	 * Plugin version.
 	 */
-	const VERSION = '1.5.8';
+	const VERSION = '1.5.9';
 
 	/**
 	 * Special hash value used to mark an attachment if its file can't be found.
@@ -1024,7 +1024,7 @@ class Media_Deduper {
 			// Spawn an async task to check whether async processing is working.
 			$async_test_key = uniqid();
 			$this->async_test->run( $async_test_key );
-			wp_localize_script( 'media-deduper-js', 'mdd_async_test_key', $async_test_key );
+			wp_add_inline_script( 'media-deduper-js', 'window.mdd_async_test_key = ' . json_encode( $async_test_key ) . ';', 'before' );
 		}
 
 		// If the indexer isn't running...
@@ -1093,8 +1093,8 @@ class Media_Deduper {
 
 		<?php
 
-		wp_localize_script( 'media-deduper-js', 'mdd_indexer_status', $this->indexer->get_status() );
-		wp_localize_script( 'media-deduper-js', 'mdd_indexer_stop_nonce', wp_create_nonce( 'mdd_index_stop' ) );
+		wp_add_inline_script( 'media-deduper-js', 'window.mdd_indexer_status = ' . json_encode( $this->indexer->get_status() ) . ';', 'before' );
+		wp_add_inline_script( 'media-deduper-js', 'window.mdd_indexer_stop_nonce = ' . json_encode( wp_create_nonce( 'mdd_index_stop' ) ) . ';', 'before' );
 	}
 
 	/**

@@ -281,7 +281,7 @@ function MDD_Indexer( $ ) {
 	$('#mdd-bar-percent').html( '0%' );
 	$('#mdd-bar').css( 'visibility', 'visible' );
 
-	// Update progress bar with initial indexer status (as passed in by wp_localize_script).
+	// Update progress bar with initial indexer status (as passed in by wp_add_inline_script).
 	update_progress();
 
 	// Check for indexer status updates every second.
