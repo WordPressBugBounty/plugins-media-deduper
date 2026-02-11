@@ -2,7 +2,7 @@
 Contributors: xavierserranoa, kenjigarland
 Tags: media, attachments, admin, upload
 Requires at least: 4.3
-Tested up to: 6.7.1
+Tested up to: 6.9
 Stable tag: 1.5.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -16,10 +16,7 @@ Before Media Deduper can identify duplicate assets, it will build an index of al
 
 **Need faster indexing? [Check out Media Deduper Pro](https://www.mediadeduper.com/).**
 
-Once up and running, Media Deduper provides two key tools:
-
-1. A "Manage Duplicates" page listing all of your duplicate media files. The list makes it easy to see and delete duplicate files: delete one and its twin will disappear from the list because it's then no longer a duplicate. Easy! By default, the list is sorted by file size, so you can focus on deleting the files that will free up the most space.
-2. A scan of media files as they're uploaded via the admin to prevent a duplicate from being added to your Media Library. Prevents new duplicates from being introduced, automagically!
+Once up and running, Media Deduper provides you with a "Manage Duplicates" page listing all of your duplicate media files. The list makes it easy to see and delete duplicate files: delete one and its twin will disappear from the list because it's then no longer a duplicate. Easy! By default, the list is sorted by file size, so you can focus on deleting the files that will free up the most space.
 
 **Use this plugin at your own risk. The plugin developers are not responsible for any lost data or site issues as a result of using this plugin.**
 
@@ -63,10 +60,6 @@ NO! Because the list includes every copy of your duplicates, you'll likely alway
 Instead, we recommend using the *Smart Delete* action (which is also found in the Bulk Actions menu). Smart Delete will delete the selected items one by one, and refuse to delete an item if it has no remaining duplicates. For example, if you have three copies of an image, and you select all three and choose Smart Delete, two copies will be deleted and the third will be skipped.
 
 *Again, we strongly recommend backing up your data before performing any bulk delete operations, including Smart Delete.*
-
-= Does Media Deduper prevent duplicates from all methods of import? =
-
-At this time, Media Deduper only identifies and blocks duplicate media files manually uploaded via the admin dashboard -- it does not block duplicates that are imported via WP-CLI or the WordPress Importer plugin.
 
 = Does this work with any plugins? =
 
